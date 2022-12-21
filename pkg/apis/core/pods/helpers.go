@@ -26,6 +26,10 @@ import (
 	"k8s.io/kubernetes/pkg/fieldpath"
 )
 
+const (
+	PodAutoPortAnnotation = "pod.kubernetes.io/autoport"
+)
+
 // ContainerVisitorWithPath is called with each container and the field.Path to that container,
 // and returns true if visiting should continue.
 type ContainerVisitorWithPath func(container *api.Container, path *field.Path) bool
